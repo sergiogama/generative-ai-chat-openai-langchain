@@ -1,3 +1,5 @@
+*** EXEMPLO DE GENERATIVE AI USANDO DADOS PRÓPRIOS COM LONGCHAIN
+
 Instale no diretório do projeto
 
 pip install langchain
