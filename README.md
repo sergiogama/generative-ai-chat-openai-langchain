@@ -16,5 +16,5 @@ Crie uma api do openAi, em https://platform.openapi.com/account/api-keys, e guar
 
 Exporte o chave da API-Key no sistema
 
-export OPENAI_API_KEY="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"
+export OPENAI_API_KEY="<API_KEY>"
 
