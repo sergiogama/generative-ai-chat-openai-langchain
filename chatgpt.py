@@ -34,37 +34,12 @@ while True:
     query = input("Digite a pergunta: ")
     print(index.query(query))
 
-
-
-
-
-
-
-
-
-#query = "Qual o preço do sapato?"
-#query = "Quantos dias tenho para devolver um produto? em português"
-#query = "Sergio Gama já trabalhou fora do Brasil? em português"
+#query = "O que seria o IVA?" # Pergunta para os dados da reforma tributária
 #print(index.query(query))
 
-#query = "Tem sapato no estoque?"
-#query = "E quanto ao manual do produto, é obrigado ser fornecido?"
-#query = "Qual a formação do Sergio Gama? em português"
-#print(index.query(query))
-
-#query = "Qual o produto mais barato que você tem?"
-#query = "Quantos anos Sergio Gama trabalhou na IBM? em português"
-#query = "Por liste os principais direitos do consumidor"
-#print(index.query(query))
-
-#query = "As áreas de serviços serão afetadas, se sim, como?"
-#query = "Quantos anos Sergio Gama trabalhou na IBM? em português"
-#query = "Por liste os principais direitos do consumidor"
-#print(index.query(query))
-
-#query = "Quem é Sergio?"
+#query = "Quais produtos tem, e qual é o mais barato?" # Pergunta parta os dados de produtos contidos em data.txt
 #print(index.query_with_sources(query))
 
-#query = "Qual o telefone do Sergio Gama. Em português"
+#query = "Quanta custa o sapato, e quantos tem em estoque?" # Pergunta parta os dados de produtos contidos em data.txt
 #print(index.query_with_sources(query))
 
