@@ -1,0 +1,4 @@
+Produto_codigo, Nome, Valor, Quantidade_em_estoque
+001,Sapato, 250.00,35
+002,Sandalia, 120.00,40
+003,Chinelo, 45.00,80
