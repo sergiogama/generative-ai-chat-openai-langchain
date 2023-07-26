@@ -46,13 +46,13 @@ cd generative-ai-chat-openai-langchain
 
 3. Abra o script Python `script_name.py` em um editor de texto ou um Ambiente de Desenvolvimento Integrado (IDE).
 
-4. Dependendo de suas necessidades, ajuste o valor da variável `rodar`:
+4. Dependendo de suas necessidades, ajuste o valor da variável `pdf`:
 
-   - Se `roda` estiver definido como 1:
+   - Se `pdf` estiver definido como 1:
      - O script extrairá dados do arquivo PDF especificado por `pdf_file` e os salvará em um arquivo de texto local chamado `data_from_pdf.txt`.
      - Certifique-se de que a variável `pdf_file` esteja configurada com o caminho correto do arquivo PDF que você deseja extrair dados.
 
-   - Se `rodar` estiver definido como 0:
+   - Se `pdf` estiver definido como 0:
      - O script carregará dados de um arquivo de texto existente chamado `data.txt`.
      - Certifique-se de que o arquivo `data.txt` contenha os dados que você deseja consultar.
 
