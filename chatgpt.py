@@ -1,9 +1,10 @@
 # Autor: Sergio Gama
 import os
 import pdfplumber
+from langchain.document_loaders import TextLoader
 
-roda = 0
-if roda == 1:
+pdf = 0
+if pdf == 1:
     pdf_file = 'Reforma-Tributaria-2023.pdf'
     with pdfplumber.open(pdf_file) as pdf:
         # Remove a local file if it exists
@@ -19,9 +20,6 @@ if roda == 1:
                 f.write(text)
                 f.write('\n')
                 f.close()
-
-from langchain.document_loaders import TextLoader
-if roda == 1:
     loader = TextLoader('data_from_pdf.txt')
 else:
     loader = TextLoader('data.txt', autodetect_encoding=True)
@@ -29,7 +27,7 @@ else:
 from langchain.indexes import VectorstoreIndexCreator
 index = VectorstoreIndexCreator().from_loaders([loader])
 
-# prompt para o su;ario digitar a pergunta, em loop
+# prompt para o usuário digitar a pergunta, em loop
 while True:
     query = input("Digite a pergunta: ")
     print(index.query(query))
