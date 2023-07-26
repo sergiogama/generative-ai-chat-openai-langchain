@@ -95,3 +95,5 @@ O script permite que você faça perguntas interativas com base nos dados e obte
 Sinta-se à vontade para experimentar diferentes consultas e explorar as capacidades do script.
 
 É isso! Agora você tem um poderoso script Python para extrair dados de PDFs, usar o modelo GPT-3.5 da OpenAI para conversações gerativas e realizar consultas interativas. Feliz codificação!
+
+Obs: Criado pelo ChatGPT baseado no código
