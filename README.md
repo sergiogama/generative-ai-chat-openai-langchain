@@ -29,6 +29,9 @@ Além disso, será necessário criar uma chave de API para a plataforma da OpenA
    ```bash
    export OPENAI_API_KEY="<API_KEY>"
    ```
+## Diagrama da solução
+
+![Diagrama](https://github.com/sergiogama/generative-ai-chat-openai-langchain/assets/7747903/1301a5aa-189f-4518-9a7c-31bf85a0069e)
 
 ## Uso
 
