@@ -31,7 +31,7 @@ Além disso, será necessário criar uma chave de API para a plataforma da OpenA
    ```
 ## Diagrama da solução
 
-![Diagrama](https://github.com/sergiogama/generative-ai-chat-openai-langchain/assets/7747903/1301a5aa-189f-4518-9a7c-31bf85a0069e)
+![Captura de Tela 2023-07-28 às 17 37 59](https://github.com/sergiogama/generative-ai-chat-openai-langchain/assets/7747903/f0bb5864-a205-4c49-a956-4273c8580b61)
 
 Obs.: Gerado por Generative AI, à partir do código
 
