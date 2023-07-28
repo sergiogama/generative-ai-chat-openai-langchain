@@ -1,17 +1,21 @@
 # Autor: Sergio Gama
+# Importa as bibliotecas necessárias
 import os
 import pdfplumber
 from langchain.document_loaders import TextLoader
+from langchain.indexes import VectorstoreIndexCreator
 
-pdf = 0
+# Verifica se os dados de entrada estão no formato PDF ou formato de texto simples
+pdf = 0  # Defina pdf para 1 se os dados estiverem no formato PDF, caso contrário, defina como 0 (assumindo que é texto simples)
 if pdf == 1:
+    # Se os dados estiverem no formato PDF, extrai o texto do PDF e salva em um arquivo local
     pdf_file = 'Reforma-Tributaria-2023.pdf'
     with pdfplumber.open(pdf_file) as pdf:
-        # Remove a local file if it exists
+        # Remove o arquivo local se já existir
         if os.path.exists('data_from_pdf.txt'):
             os.remove('data_from_pdf.txt')
-            
-        # ler todas as páginas do pdf e salve em um arquivo local
+
+        # Lê todas as páginas do PDF e salva em um arquivo local
         for i in range(0, len(pdf.pages)):
             page = pdf.pages[i]
             text = page.extract_text()
@@ -20,24 +24,24 @@ if pdf == 1:
                 f.write(text)
                 f.write('\n')
                 f.close()
-    loader = TextLoader('data_from_pdf.txt')
+    loader = TextLoader('data_from_pdf.txt')  # Cria um carregador de texto para os dados do PDF
 else:
-    loader = TextLoader('data.txt', autodetect_encoding=True)
+    loader = TextLoader('data.txt', autodetect_encoding=True)  # Cria um carregador de texto para os dados de texto simples
 
-from langchain.indexes import VectorstoreIndexCreator
+# Cria um índice usando o VectorstoreIndexCreator
 index = VectorstoreIndexCreator().from_loaders([loader])
 
-# prompt para o usuário digitar a pergunta, em loop
+# Inicia um loop para consultar interativamente o índice
 while True:
-    query = input("Digite a pergunta: ")
-    print(index.query(query))
+    query = input("Digite a pergunta: ")  # Solicita ao usuário que digite uma pergunta
+    print(index.query(query))  # Imprime o resultado da consulta
 
-#query = "O que seria o IVA?" # Pergunta para os dados da reforma tributária
-#print(index.query(query))
+# O código abaixo (comentado) mostra algumas consultas de exemplo que podem ser usadas para recuperar informações do índice:
+# query = "O que seria o IVA?"  # Pergunta para os dados do "Reforma-Tributaria-2023.pdf"
+# print(index.query(query))
 
-#query = "Quais produtos tem, e qual é o mais barato?" # Pergunta parta os dados de produtos contidos em data.txt
-#print(index.query_with_sources(query))
+# query = "Quais produtos têm, e qual é o mais barato?"  # Pergunta para os dados do "data.txt"
+# print(index.query_with_sources(query))
 
-#query = "Quanta custa o sapato, e quantos tem em estoque?" # Pergunta parta os dados de produtos contidos em data.txt
-#print(index.query_with_sources(query))
-
+# query = "Quanto custa o sapato, e quantos têm em estoque?"  # Pergunta para os dados do "data.txt"
+# print(index.query_with_sources(query))
