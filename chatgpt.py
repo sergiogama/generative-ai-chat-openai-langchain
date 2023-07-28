@@ -1,4 +1,5 @@
 # Autor: Sergio Gama
+# Data: Julho/2023
 # Importa as bibliotecas necessárias
 import os
 import pdfplumber
